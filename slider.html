@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/jquery.jcarousel.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .jcarousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jcarousel ul {
+            width: 10000em;
+            position: relative;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .jcarousel li {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jcarousel">
+        <ul>
+            <li><img src="images/1.jpg" alt="" /></li>
+            <li><img src="images/2.jpg" alt="" /></li>
+            <li><img src="images/3.jpg" alt="" /></li>
+            <li><img src="images/4.jpg" alt="" /></li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $(".jcarousel").jcarousel({
+                vertical: true,
+                center: true,
+                animation: {
+                    duration: 800,
+                    easing: "linear",
+                    complete: function () { },
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
